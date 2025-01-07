@@ -4,88 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px;
-        }
-
-        .gallery img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        /* Optional: Add smooth scroll effect */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Artist Portfolio</h1>
-        <p>Explore my collection of artwork</p>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">Artist Portfolio</h1>
+            <p class="mt-2 text-lg">Explore my collection of artwork</p>
+        </div>
     </header>
-    <div class="gallery" id="gallery">
-        <!-- Images will be added here by JavaScript -->
+
+    <!-- Gallery -->
+    <main class="container mx-auto py-10 px-4">
+        <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Images and descriptions will be loaded here -->
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg overflow-hidden w-11/12 md:w-2/3 lg:w-1/2">
+            <img id="modalImage" class="w-full">
+            <div class="p-6">
+                <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+                <p id="modalDescription" class="mt-4"></p>
+                <button id="closeModal" class="mt-6 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700">
+                    Close
+                </button>
+            </div>
+        </div>
     </div>
-    <footer>
+
+    <footer class="bg-gray-900 text-white text-center py-4">
         &copy; 2025 Artist Name. All rights reserved.
     </footer>
 
-    <script>
-        const gallery = document.getElementById('gallery');
-
-        // Manually define the image filenames
-        const images = [
-            'images/art1.jpg',
-            'images/art2.jpg',
-            'images/art3.jpg',
-            'images/art4.jpg',
-            'images/art5.jpg'
-        ];
-
-        // Dynamically create image elements
-        images.forEach(image => {
-            const img = document.createElement('img');
-            img.src = image;
-            img.alt = 'Artwork';
-            gallery.appendChild(img);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
