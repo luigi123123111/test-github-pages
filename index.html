@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist Portfolio</title>
+    <title>Responsive Artist Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Optional: Add smooth scroll effect */
-        html {
-            scroll-behavior: smooth;
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ensures the footer is pinned to the bottom on larger screens */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Handle orientation changes */
+        @media (orientation: landscape) {
+            .gallery img {
+                height: 150px;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -22,8 +39,9 @@
         </div>
     </header>
 
-    <!-- Gallery -->
-    <main class="container mx-auto py-10 px-4">
+    <!-- Main Content -->
+    <main class="container mx-auto flex flex-col py-10 px-4">
+        <!-- Gallery -->
         <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Images and descriptions will be loaded here -->
         </div>
@@ -43,6 +61,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white text-center py-4">
         &copy; 2025 Artist Name. All rights reserved.
     </footer>
