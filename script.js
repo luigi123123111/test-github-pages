@@ -19,6 +19,11 @@ const artworks = [
         src: 'images/art4.jpg',
         shortDescription: 'A beautiful cityscape at dusk.',
         fullDescription: 'This cityscape captures the essence of urban life at dusk, with warm lights and a tranquil ambiance.'
+    },
+    {
+        src: 'images/art5.jpg',
+        shortDescription: 'A beautiful cityscape at dusk.',
+        fullDescription: 'This cityscape captures the essence of urban life at dusk, with warm lights and a tranquil ambiance.'
     }
 ];
 
