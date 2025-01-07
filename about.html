@@ -7,14 +7,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .about-section {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #121212;
-                color: #f5f5f5;
-            }
-
-            header, footer {
-                background-color: #1e1e1e;
                 color: #f5f5f5;
             }
 
@@ -31,6 +50,11 @@
             .btn:hover {
                 background-color: #444;
             }
+
+            footer {
+                background-color: #1e1e1e;
+                color: #f5f5f5;
+            }
         }
     </style>
 </head>
@@ -39,7 +63,7 @@
     <!-- Header -->
     <header class="bg-gray-900 text-white py-6">
         <div class="container mx-auto flex justify-between items-center px-4">
-            <h1 class="text-2xl font-bold">About Me</h1>
+            <h1 class="text-2xl font-bold">Artist Portfolio</h1>
             <nav>
                 <a href="index.html" class="text-gray-300 hover:text-white mx-2">Gallery</a>
                 <a href="about.html" class="text-gray-300 hover:text-white mx-2">About Me</a>
@@ -49,8 +73,8 @@
 
     <!-- About Content -->
     <section class="about-section py-10 container mx-auto px-4">
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-6">
-            <h2 class="text-3xl font-bold">Artist Name</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow p-6">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
             <p class="mt-4">
                 Hello! I'm <strong>Artist Name</strong>, a passionate artist specializing in modern, abstract, and landscape art.
                 My journey into the world of colors and creativity began at a young age, and I’ve spent years exploring
@@ -66,7 +90,7 @@
             </p>
             <div class="mt-6 text-center">
                 <a href="mailto:artistemail@example.com">
-                    <button class="btn px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-500">
+                    <button class="btn px-6 py-3 font-bold rounded-lg shadow">
                         Email Me
                     </button>
                 </a>
