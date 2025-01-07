@@ -1,1 +1,91 @@
-This is a test!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Artist Portfolio</h1>
+        <p>Explore my collection of artwork</p>
+    </header>
+    <div class="gallery" id="gallery">
+        <!-- Images will be added here by JavaScript -->
+    </div>
+    <footer>
+        &copy; 2025 Artist Name. All rights reserved.
+    </footer>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+
+        // Manually define the image filenames
+        const images = [
+            'images/art1.jpg',
+            'images/art2.jpg',
+            'images/art3.jpg',
+            'images/art4.jpg',
+            'images/art5.jpg'
+        ];
+
+        // Dynamically create image elements
+        images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image;
+            img.alt = 'Artwork';
+            gallery.appendChild(img);
+        });
+    </script>
+</body>
+</html>
