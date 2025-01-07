@@ -22,12 +22,12 @@ const artworks = [
     },
     {
         src: 'images/art5.jpg',
-        shortDescription: 'A beautiful cityscape at dusk.',
-        fullDescription: 'This cityscape captures the essence of urban life at dusk, with warm lights and a tranquil ambiance.'
+        shortDescription: 'A beautiful forest.',
+        fullDescription: 'This forest captures the essence of wild life, with warm lights and a tranquil ambiance.'
     }
 ];
 
-// Load gallery
+// Load gallery dynamically
 const gallery = document.getElementById('gallery');
 artworks.forEach((artwork, index) => {
     const imageCard = document.createElement('div');
@@ -43,7 +43,7 @@ artworks.forEach((artwork, index) => {
     gallery.appendChild(imageCard);
 });
 
-// Modal handling
+// Modal functionality
 const modal = document.getElementById('modal');
 const modalImage = document.getElementById('modalImage');
 const modalTitle = document.getElementById('modalTitle');
