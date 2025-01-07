@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f5f5f5;
+            }
+
+            .bg-white {
+                background-color: #1e1e1e;
+                color: #f5f5f5;
+            }
+
+            .btn {
+                background-color: #2a2a2a;
+                color: white;
+            }
+
+            .btn:hover {
+                background-color: #444;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold">About Me</h1>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="py-10 container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-bold">Artist Name</h2>
+            <p class="mt-4">
+                Hello! I'm <strong>Artist Name</strong>, a passionate artist specializing in modern, abstract, and landscape art.
+                My journey into the world of colors and creativity began at a young age, and I’ve spent years exploring
+                various mediums and styles to express emotions, stories, and the beauty of the world around us.
+            </p>
+            <p class="mt-4">
+                Through my art, I aim to inspire, evoke emotions, and connect with people from all walks of life. When I'm
+                not painting, you’ll find me exploring nature, soaking in its beauty, and using it as inspiration for my
+                next masterpiece.
+            </p>
+            <p class="mt-4">
+                Feel free to reach out to me for commissions, collaborations, or just to share your thoughts on my art!
+            </p>
+            <div class="mt-6 text-center">
+                <a href="mailto:artistemail@example.com">
+                    <button class="btn px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-500">
+                        Email Me
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-4">
+        &copy; 2025 Artist Name. All rights reserved.
+    </footer>
+
+</body>
+</html>
