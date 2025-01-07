@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Artist Portfolio</title>
+    <title>Artist Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html, body {
@@ -13,18 +13,32 @@
             flex-direction: column;
         }
 
-        /* Ensures the footer is pinned to the bottom on larger screens */
+        /* Pin footer to bottom */
         main {
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        /* Handle orientation changes */
-        @media (orientation: landscape) {
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f5f5f5;
+            }
+
+            header, footer {
+                background-color: #1e1e1e;
+                color: #f5f5f5;
+            }
+
+            .about {
+                background-color: #2a2a2a;
+                color: #f5f5f5;
+            }
+
             .gallery img {
-                height: 150px;
-                object-fit: cover;
+                border: 2px solid #444;
             }
         }
     </style>
@@ -39,9 +53,27 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- About Me Section -->
+    <section class="about py-10 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center">About Me</h2>
+            <div class="mt-6 max-w-3xl mx-auto text-center">
+                <p class="text-lg leading-relaxed">
+                    Hello! I'm <strong>Artist Name</strong>, a passionate artist specializing in modern, abstract, and landscape art. 
+                    My journey into the world of colors and creativity began at a young age, and I’ve spent years exploring 
+                    various mediums and styles to express emotions, stories, and the beauty of the world around us.
+                </p>
+                <p class="mt-4 text-lg leading-relaxed">
+                    Through my art, I aim to inspire, evoke emotions, and connect with people from all walks of life. When I'm 
+                    not painting, you’ll find me exploring nature, soaking in its beauty, and using it as inspiration for my 
+                    next masterpiece.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
     <main class="container mx-auto flex flex-col py-10 px-4">
-        <!-- Gallery -->
         <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Images and descriptions will be loaded here -->
         </div>
